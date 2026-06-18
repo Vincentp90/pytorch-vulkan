@@ -1,3 +1,14 @@
+Trying to add vulkan to pytorch. 
+
+I don't have good enough hardware, cpu is too slow. Builds take too long. So i will probably delete this repo.
+
+addvulkan-plan.md: implementation plan
+vulkan-build.md: how to build
+develop.md: log of what the agent did
+
+
+--------------------------------------------------------------------------------
+
 ![PyTorch Logo](https://github.com/pytorch/pytorch/raw/main/docs/source/_static/img/pytorch-logo-dark.png)
 
 --------------------------------------------------------------------------------

@@ -504,7 +504,8 @@ Tensor& activation_scalar_(
 Tensor gelu(const Tensor& self, std::string_view approximate) {
   TORCH_CHECK(
       approximate == "tanh", "Vulkan: gelu only supported for tanh type");
-  Scalar kBetaVec = M_SQRT2 * M_2_SQRTPI * 0.5;
+  constexpr double kBeta = 1.12837916709551257390;
+  Scalar kBetaVec = kBeta;
   std::vector<Scalar> scalar;
   scalar.push_back(kBetaVec);
 
@@ -524,7 +525,8 @@ Tensor gelu(const Tensor& self, std::string_view approximate) {
 Tensor& gelu_(Tensor& self, std::string_view approximate) {
   TORCH_CHECK(
       approximate == "tanh", "Vulkan: gelu only supported for tanh type");
-  Scalar kBetaVec = M_SQRT2 * M_2_SQRTPI * 0.5;
+  constexpr double kBeta = 1.12837916709551257390;
+  Scalar kBetaVec = kBeta;
   std::vector<Scalar> scalar;
   scalar.push_back(kBetaVec);
 

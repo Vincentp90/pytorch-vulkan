@@ -89,6 +89,10 @@ class Runtime final {
     return default_adapter_i_;
   }
 
+  inline uint32_t num_adapters() const {
+    return static_cast<uint32_t>(adapters_.size());
+  }
+
   using Selector =
       std::function<uint32_t(const std::vector<Runtime::DeviceMapping>&)>;
   uint32_t create_adapter(const Selector&);
